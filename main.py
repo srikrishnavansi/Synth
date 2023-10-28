@@ -86,16 +86,16 @@ def main():
                 modified_data[selected_columns] = synthetic_data
 
                 # Save the modified data to a new CSV file
-                modified_data.to_csv("modified_data.csv", index=False)
+                modified_data.to_csv("synthetic_data.csv", index=False)
                 st.success("Synthetic data generated and modified data saved to CSV.")
 
                 # Display a preview of the modified data
-                st.header("Modified Data Preview")
+                st.header("Synthetic Data Preview")
                 st.write(modified_data.head())
 
         if st.button("Download Modified Data"):
-            with open("modified_data.csv", "rb") as file:
-                st.download_button("Download Modified Data CSV", file.read(), file_name="modified_data.csv")
+            with open("synthetic_data.csv", "rb") as file:
+                st.download_button("Download synthetic Data CSV", file.read(), file_name="synthetic_data.csv")
 
 if __name__ == "__main__":
     main()
