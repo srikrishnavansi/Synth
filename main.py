@@ -93,7 +93,7 @@ def main():
                 st.header("Synthetic Data Preview")
                 st.write(modified_data.head())
 
-        if st.button("Download Modified Data"):
+        if st.button("Download Synthetic Data"):
             with open("synthetic_data.csv", "rb") as file:
                 st.download_button("Download synthetic Data CSV", file.read(), file_name="synthetic_data.csv")
 
